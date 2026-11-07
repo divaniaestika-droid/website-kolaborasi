@@ -1,0 +1,725 @@
+/* ==============================
+   PENGATURAN DASAR
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #eef6ff;
+    color: #183153;
+    line-height: 1.7;
+}
+
+
+/* ==============================
+   NAVIGASI
+============================== */
+
+header {
+    width: 100%;
+    position: relative;
+    z-index: 100;
+}
+
+nav {
+    background: #0b2545;
+    padding: 15px 7%;
+    box-shadow: 0 4px 15px rgba(0, 30, 70, 0.15);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #ffffff;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.logo img {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #65c7ff;
+}
+
+
+/* ==============================
+   HERO SECTION
+============================== */
+
+.hero {
+    padding: 65px 10%;
+    text-align: center;
+}
+
+.hero:first-of-type {
+    background: linear-gradient(
+        135deg,
+        #0b2545,
+        #145da0,
+        #2796d2
+    );
+    color: white;
+    padding: 85px 10%;
+}
+
+.hero-content h2 {
+    font-size: 38px;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 17px;
+    margin-bottom: 20px;
+    color: #e0f2ff;
+}
+
+.btn-back {
+    display: inline-block;
+    background: #ffffff;
+    color: #145da0;
+    text-decoration: none;
+    padding: 11px 28px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-back:hover {
+    background: #65c7ff;
+    color: #0b2545;
+    transform: translateY(-3px);
+}
+
+
+/* ==============================
+   MATERI PENGELOLAAN SAMPAH
+============================== */
+
+.hero:nth-of-type(2) {
+    background: #eef6ff;
+    padding: 65px 12%;
+}
+
+.hero:nth-of-type(2) h1 {
+    color: #0b4f8a;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.hero:nth-of-type(2) p {
+    max-width: 950px;
+    margin: 0 auto 20px;
+    text-align: justify;
+    font-size: 16px;
+    color: #425b78;
+    line-height: 1.9;
+}
+
+
+/* ==============================
+   BAGIAN 3R
+============================== */
+
+#service {
+    padding: 60px 7%;
+    background: linear-gradient(
+        180deg,
+        #dceeff,
+        #f4f9ff
+    );
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.service {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 18px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(20, 93, 160, 0.12);
+    border: 1px solid #d6eaff;
+    transition: 0.3s;
+}
+
+.service:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 14px 30px rgba(20, 93, 160, 0.2);
+}
+
+.service img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+
+/* ==============================
+   DETAILS DAN SUMMARY
+============================== */
+
+.service details {
+    text-align: left;
+}
+
+.service summary {
+    background: #145da0;
+    color: white;
+    padding: 13px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    list-style-position: inside;
+    transition: 0.3s;
+}
+
+.service summary:hover {
+    background: #2796d2;
+}
+
+.service details[open] summary {
+    background: #0b2545;
+    border-radius: 10px 10px 0 0;
+}
+
+.service details p {
+    background: #edf6ff;
+    color: #425b78;
+    padding: 18px;
+    font-size: 14px;
+    text-align: justify;
+    border-radius: 0 0 10px 10px;
+    line-height: 1.8;
+}
+
+
+/* ==============================
+   FOOTER
+============================== */
+
+.site-footer {
+    background: #0b2545;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 15px;
+    font-size: 14px;
+}
+
+.site-footer p {
+    margin: 8px 0;
+}
+
+.site-footer a {
+    color: #65c7ff;
+    text-decoration: none;
+    margin: 0 8px;
+    transition: 0.3s;
+}
+
+.site-footer a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+
+/* ==============================
+   RESPONSIVE TABLET
+============================== */
+
+@media (max-width: 900px) {
+
+    .services {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .nav-container {
+        justify-content: center;
+    }
+
+    .nav-menu {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+}
+
+
+/* ==============================
+   RESPONSIVE HP
+============================== */
+
+@media (max-width: 600px) {
+
+    nav {
+        padding: 15px 5%;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .nav-menu {
+        gap: 12px;
+    }
+
+    .nav-menu a {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 45px 7%;
+    }
+
+    .hero:first-of-type {
+        padding: 65px 7%;
+    }
+
+    .hero-content h2 {
+        font-size: 28px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .hero:nth-of-type(2) h1 {
+        font-size: 25px;
+    }
+
+    .hero:nth-of-type(2) p {
+        font-size: 14px;
+    }
+
+    #service {
+        padding: 40px 6%;
+    }
+
+    .services {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .service img {
+        height: 250px;
+    }
+
+    .site-footer {
+        font-size: 12px;
+    }
+
+}
+
+/* ==============================
+   MATERI PENGELOLAAN LIMBAH
+============================== */
+
+.materi-pengelolaan {
+    width: 100%;
+    padding: 70px 8%;
+    background: linear-gradient(
+        135deg,
+        #eef6ff,
+        #dceeff
+    );
+}
+
+.materi-container {
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+}
+
+/* JUDUL DI BAGIAN ATAS */
+
+.materi-title {
+    width: 100%;
+    text-align: center;
+    border: none;
+    padding: 0;
+}
+
+.materi-title h1 {
+    color: #0b416b;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.3;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.materi-title::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: #2796d2;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+/* DUA PARAGRAF */
+
+.materi-description {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    align-items: stretch;
+}
+
+.materi-description p {
+    background: #ffffff;
+    color: #425b78;
+    padding: 25px;
+    border-radius: 15px;
+
+    font-size: 15px;
+    line-height: 1.9;
+    text-align: justify;
+
+    box-shadow: 0 5px 20px rgba(20, 93, 160, 0.10);
+    border: 1px solid #d6eaff;
+
+    transition: 0.3s;
+}
+
+.materi-description p:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(20, 93, 160, 0.15);
+}
+
+
+/* RESPONSIVE TABLET */
+
+@media (max-width: 900px) {
+
+    .materi-pengelolaan {
+        padding: 55px 6%;
+    }
+
+    .materi-title h1 {
+        font-size: 30px;
+    }
+
+    .materi-description {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* RESPONSIVE HP */
+
+@media (max-width: 600px) {
+
+    .materi-pengelolaan {
+        padding: 40px 6%;
+    }
+
+    .materi-title h1 {
+        font-size: 26px;
+    }
+
+    .materi-description p {
+        font-size: 14px;
+        padding: 20px;
+    }
+
+}
+
+/* ================================
+   BACK BUTTON
+================================ */
+.back-section {
+    padding: 45px 0;
+    background: #eaf7ff;
+    text-align: center;
+}
+
+.btn-back {
+    display: inline-block;
+    background: linear-gradient(
+        135deg,
+        #269bd6,
+        #1676b5
+    );
+    color: white;
+    text-decoration: none;
+    padding: 13px 30px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 700;
+    box-shadow: 0 5px 15px rgba(30, 130, 190, 0.25);
+    transition: 0.3s;
+}
+
+
+.btn-back:hover {
+    background: #105f94;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(30, 130, 190, 0.3);
+}
+
+/* ================================
+   FOOTER
+================================ */
+.footer {
+    background: #24496c;
+    color: #d9edff;
+    padding: 45px 0 18px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 35px;
+}
+
+.footer-logo {
+    margin-bottom: 15px;
+}
+
+.footer-logo img {
+    border: 2px solid #8ed4ff;
+}
+
+.footer-logo span {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.footer-section p {
+    font-size: 14px;
+    color: #d9edff;
+    line-height: 1.8;
+}
+
+.footer-section h4 {
+    color: #8ed4ff;
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+.footer-section h4::after {
+    content: "";
+    display: block;
+    width: 35px;
+    height: 3px;
+    background: #8ed4ff;
+    margin-top: 8px;
+    border-radius: 5px;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+    font-size: 13px;
+    color: #d9edff;
+}
+
+.footer-section a {
+    text-decoration: none;
+    color: #d9edff;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.footer-section a:hover {
+    color: #8ed4ff;
+    padding-left: 5px;
+}
+
+/* SOCIAL LINKS */
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.social-links a {
+    display: inline-block;
+    width: fit-content;
+    padding: 7px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    background: #8ed4ff;
+    color: #174b7a;
+    padding-left: 20px;
+}
+
+/* FOOTER BOTTOM */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 20px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 13px;
+    color: #d9edff;
+}
+
+/* ================================
+   RESPONSIVE TABLET
+================================ */
+@media (max-width: 900px) {
+
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ================================
+   RESPONSIVE HP
+================================ */
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 12px 0;
+    }
+
+    .nav-menu {
+        gap: 8px;
+    }
+
+    .nav-menu a {
+        font-size: 12px;
+        padding: 7px 12px;
+    }
+
+    .hero-content-page h1 {
+        font-size: 26px;
+    }
+
+    .subtitle {
+        font-size: 15px;
+        letter-spacing: 1px;
+    }
+
+    .page-hero {
+        padding: 55px 0;
+    }
+
+    .intro-section,
+    .observations-section {
+        padding: 40px 0;
+    }
+
+    .intro-content {
+        padding: 22px;
+    }
+
+    .intro-content h2 {
+        font-size: 23px;
+    }
+
+    .section-title-page {
+        font-size: 24px;
+        margin-bottom: 28px;
+    }
+
+    .observation-header {
+        padding: 18px;
+    }
+
+    .author-info {
+        gap: 12px;
+    }
+
+    .author-info img {
+        width: 52px;
+        height: 52px;
+    }
+
+    .author-info h3 {
+        font-size: 14px;
+    }
+
+    .observation-content {
+        padding: 22px 18px;
+    }
+
+    .observation-content h4 {
+        font-size: 18px;
+    }
+
+    .observation-content p {
+        font-size: 14px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+}
+

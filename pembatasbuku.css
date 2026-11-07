@@ -1,0 +1,718 @@
+/* ========================================
+   1. PENGATURAN DASAR
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eff6ff;
+    color: #1e293b;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   2. HEADER
+======================================== */
+
+header {
+    background-color: #0c4a6e;
+    color: white;
+    padding: 20px 8%;
+}
+
+h1 {
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Judul Utama */
+
+.main-header {
+    display: block;
+    text-align: center;
+    background-color: #83bbdf;
+    padding: 20px 10px;
+}
+
+.main-header h1 {
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+/* ========================================
+   3. NAVIGASI
+======================================== */
+
+nav {
+    background-color: #075985;
+    padding: 13px;
+    border-radius: 10px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #7dd3fc;
+}
+
+
+/* ========================================
+   4. HERO SECTION
+======================================== */
+
+.hero {
+    background: linear-gradient(
+        135deg,
+        #0c4a6e,
+        #0284c7,
+        #38bdf8
+    );
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h2 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.hero a {
+    display: inline-block;
+    background-color: white;
+    color: #075985;
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.hero a:hover {
+    background-color: #bae6fd;
+    transform: translateY(-3px);
+}
+
+
+/* ========================================
+   5. HERO HOME
+======================================== */
+
+section.hero#home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    padding: 80px 20px;
+    min-height: auto;
+}
+
+section.hero#home h2,
+section.hero#home p {
+    margin: 0;
+}
+
+section.hero#home .back-button {
+    display: inline-block;
+    margin-top: 15px;
+}
+
+
+/* ========================================
+   6. SECTION SERVICE
+======================================== */
+
+.service {
+    padding: 50px 7%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.dampak {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    align-items: start;
+}
+
+
+/* ========================================
+   7. CARD
+======================================== */
+
+.card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    border-top: 6px solid #0284c7;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(2, 132, 199, 0.15);
+}
+
+.card h3 {
+    color: #075985;
+    font-size: 22px;
+    margin: 20px 0 12px;
+}
+
+.card h3:first-child {
+    margin-top: 0;
+}
+
+.card h4 {
+    color: #0284c7;
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+.card p {
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+.card ol {
+    padding-left: 25px;
+    margin-bottom: 20px;
+}
+
+.card li {
+    padding: 4px 0;
+}
+
+
+/* ========================================
+   8. TABEL
+======================================== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0 25px;
+    background-color: white;
+}
+
+table th {
+    background-color: #075985;
+    color: white;
+    padding: 12px;
+    text-align: center;
+}
+
+table td {
+    padding: 10px;
+    border: 1px solid #bfdbfe;
+}
+
+table tr:nth-child(even) {
+    background-color: #eff6ff;
+}
+
+table tr:hover {
+    background-color: #dbeafe;
+}
+
+
+/* ========================================
+   9. TOMBOL KEMBALI
+======================================== */
+
+.back-section {
+    padding: 45px 0;
+    background: #eaf7ff;
+    text-align: center;
+}
+
+.btn-back {
+    display: inline-block;
+    background: linear-gradient(
+        135deg,
+        #269bd6,
+        #1676b5
+    );
+    color: white;
+    text-decoration: none;
+    padding: 13px 30px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 700;
+    box-shadow: 0 5px 15px rgba(30, 130, 190, 0.25);
+    transition: 0.3s;
+}
+
+.btn-back:hover {
+    background: #105f94;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(30, 130, 190, 0.3);
+}
+
+
+/* ========================================
+   10. FOOTER
+======================================== */
+
+.site-footer {
+    background-color: #0c4a6e;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+    margin-top: 30px;
+}
+
+.site-footer p {
+    margin: 5px 0;
+}
+
+.site-footer a {
+    color: #7dd3fc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.site-footer a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+
+/* ========================================
+   11. RESPONSIVE TABLET DAN HP
+======================================== */
+
+@media screen and (max-width: 768px) {
+
+    /* Header */
+
+    h1 {
+        font-size: 24px;
+    }
+
+    /* Navigasi */
+
+    .nav-menu {
+        gap: 15px;
+    }
+
+    /* Hero */
+
+    .hero {
+        padding: 55px 15px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    /* Card */
+
+    .dampak {
+        grid-template-columns: 1fr;
+    }
+
+    .service {
+        padding: 30px 15px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    /* Tabel */
+
+    table {
+        font-size: 13px;
+    }
+
+}
+
+/* ================================
+   BACK BUTTON
+================================ */
+.back-section {
+    padding: 45px 0;
+    background: #eaf7ff;
+    text-align: center;
+}
+
+.btn-back {
+    display: inline-block;
+    background: linear-gradient(
+        135deg,
+        #269bd6,
+        #1676b5
+    );
+    color: white;
+    text-decoration: none;
+    padding: 13px 30px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 700;
+    box-shadow: 0 5px 15px rgba(30, 130, 190, 0.25);
+    transition: 0.3s;
+}
+
+
+.btn-back:hover {
+    background: #105f94;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(30, 130, 190, 0.3);
+}
+
+/* FOOTER CONTENT */
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 35px;
+    text-align: left;
+}
+
+.footer-brand {
+    max-width: 320px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.footer-logo img {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.footer-logo h2 {
+    color: white;
+    font-size: 23px;
+}
+
+.footer-brand p {
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.footer-section h3 {
+    color: white;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section li {
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: #7dd3fc;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-section a:hover {
+    color: white;
+    padding-left: 4px;
+}
+
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.25);
+    margin-top: 35px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 5px 0;
+    font-size: 13px;
+}
+
+@media screen and (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ================================
+   FOOTER
+================================ */
+.footer {
+    background: #24496c;
+    color: #d9edff;
+    padding: 45px 0 18px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 35px;
+}
+
+.footer-logo {
+    margin-bottom: 15px;
+}
+
+.footer-logo img {
+    border: 2px solid #8ed4ff;
+}
+
+.footer-logo span {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.footer-section p {
+    font-size: 14px;
+    color: #d9edff;
+    line-height: 1.8;
+}
+
+.footer-section h4 {
+    color: #8ed4ff;
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+.footer-section h4::after {
+    content: "";
+    display: block;
+    width: 35px;
+    height: 3px;
+    background: #8ed4ff;
+    margin-top: 8px;
+    border-radius: 5px;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+    font-size: 13px;
+    color: #d9edff;
+}
+
+.footer-section a {
+    text-decoration: none;
+    color: #d9edff;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.footer-section a:hover {
+    color: #8ed4ff;
+    padding-left: 5px;
+}
+
+/* SOCIAL LINKS */
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.social-links a {
+    display: inline-block;
+    width: fit-content;
+    padding: 7px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    background: #8ed4ff;
+    color: #174b7a;
+    padding-left: 20px;
+}
+
+/* FOOTER BOTTOM */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 20px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 13px;
+    color: #d9edff;
+}
+
+/* ================================
+   RESPONSIVE TABLET
+================================ */
+@media (max-width: 900px) {
+
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ================================
+   RESPONSIVE HP
+================================ */
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 12px 0;
+    }
+
+    .nav-menu {
+        gap: 8px;
+    }
+
+    .nav-menu a {
+        font-size: 12px;
+        padding: 7px 12px;
+    }
+
+    .hero-content-page h1 {
+        font-size: 26px;
+    }
+
+    .subtitle {
+        font-size: 15px;
+        letter-spacing: 1px;
+    }
+
+    .page-hero {
+        padding: 55px 0;
+    }
+
+    .intro-section,
+    .observations-section {
+        padding: 40px 0;
+    }
+
+    .intro-content {
+        padding: 22px;
+    }
+
+    .intro-content h2 {
+        font-size: 23px;
+    }
+
+    .section-title-page {
+        font-size: 24px;
+        margin-bottom: 28px;
+    }
+
+    .observation-header {
+        padding: 18px;
+    }
+
+    .author-info {
+        gap: 12px;
+    }
+
+    .author-info img {
+        width: 52px;
+        height: 52px;
+    }
+
+    .author-info h3 {
+        font-size: 14px;
+    }
+
+    .observation-content {
+        padding: 22px 18px;
+    }
+
+    .observation-content h4 {
+        font-size: 18px;
+    }
+
+    .observation-content p {
+        font-size: 14px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+}

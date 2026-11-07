@@ -1,0 +1,961 @@
+/* Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Root Variables - BLUE THEME */
+:root {
+    --primary-color: #0D47A1;
+    --secondary-color: #456789;
+    --accent-color: #29B6F6;
+    --text-color: #263747;
+    --light-gray: #EAF4FC;
+    --medium-gray: #D1E3F2;
+    --dark-gray: #123B63;
+    --white: #ffffff;
+}
+
+/* Base Styles */
+body {
+    font-family: 'DM Sans', 'Gotham', 'TeX Gyre Termes', 'TT Interphases Mono', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(13, 71, 161, 0.92);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 20px 0;
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: var(--white);
+    font-size: 28px;
+    font-weight: 700;
+    font-family: 'TeX Gyre Termes';
+}
+
+.logo img {
+    width: 45px;
+    height: 45px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 50px;
+}
+
+.nav-menu a {
+    display: inline-block;
+    padding: 8px 18px;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    border: 1.5px solid rgba(255, 255, 255, 0.7);
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    font-family: 'TeX Gyre Termes';
+}
+
+.nav-menu a:hover {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+    background: rgba(41, 182, 246, 0.1);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    min-height: 100vh;
+
+    background-image:
+        linear-gradient(
+            rgba(13, 71, 161, 0.45),
+            rgba(18, 59, 99, 0.65)
+        ),
+        url("images/recycle.jpg");
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content {
+    color: var(--white);
+}
+
+
+
+.hero h1 {
+    font-family: 'TeX Gyre Termes';
+    font-size: 100px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+.hero-underline {
+    width: 280px;
+    height: 6px;
+    background: var(--white);
+    margin: 30px auto 40px;
+}
+
+.hero-subtitle {
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-family: 'DM Sans';
+}
+
+/* Why Section */
+.why-section {
+    padding: 60px 0;
+    background: var(--light-gray);
+}
+
+.why-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: center;
+}
+
+.why-text h2 {
+    font-family: 'TeX Gyre Termes';
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+}
+
+.why-text p {
+    font-size: 20px;
+    line-height: 1.8;
+    color: var(--secondary-color);
+}
+
+.why-image {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.why-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Collaboration Section */
+.collaboration-section {
+    padding: 60px 0;
+    background: var(--dark-gray);
+}
+
+.section-title {
+    font-size: 56px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 80px;
+    color: var(--white);
+    font-family: 'TeX Gyre Termes';
+}
+
+.collaboration-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.collab-card {
+    background: var(--white);
+    padding: 50px 40px;
+    border-radius: 20px;
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.collab-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 80px rgba(13, 71, 161, 0.2);
+}
+
+.collab-icon {
+    width: 210px;
+    height: 200px;
+    margin: 0 auto 40px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.collab-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.collab-card h3 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    line-height: 1.3;
+}
+
+.number {
+    font-size: 48px;
+    color: var(--secondary-color);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.collab-underline {
+    width: 200px;
+    height: 3px;
+    background: var(--primary-color);
+    margin: 30px auto;
+}
+
+.learn-more {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    font-family: 'TT Interphases Mono';
+}
+
+.learn-more:hover {
+    color: var(--accent-color);
+}
+
+/* Products Section */
+.products-section {
+    padding: 60px 0;
+    background: var(--light-gray);
+}
+
+.products-section .section-title {
+    color: var(--primary-color);
+    font-family: 'TeX Gyre Termes';
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+}
+
+.product-card {
+    background: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 80px rgba(13, 71, 161, 0.15);
+}
+
+.product-image {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.1);
+}
+
+.product-card h3 {
+    font-size: 32px;
+    font-weight: 700;
+    padding: 30px 30px 20px;
+}
+
+.product-card p {
+    font-size: 18px;
+    color: var(--secondary-color);
+    padding: 0 30px;
+    line-height: 1.6;
+}
+
+.product-underline {
+    width: calc(100% - 60px);
+    height: 2px;
+    background: var(--primary-color);
+    margin: 25px 30px;
+}
+
+.product-card .learn-more {
+    display: block;
+    padding: 0 30px 30px;
+}
+
+/* Team Section */
+.team-section {
+    padding: 60px 0;
+    background: var(--light-gray);
+}
+
+.team-section .section-title {
+    color: var(--primary-color);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+}
+
+.team-card {
+    text-align: center;
+}
+
+.team-image {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto 30px;
+    border: 5px solid var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 0 3px var(--accent-color),
+                0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.team-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.team-card:hover .team-image img {
+    transform: scale(1.05);
+}
+
+.team-card h3 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.team-card p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--secondary-color);
+    padding: 0 20px;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 60px 0;
+    background: var(--dark-gray);
+}
+
+.contact-section .section-title {
+    color: var(--white);
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 80px;
+    margin-top: 60px;
+}
+
+.contact-info h3 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: var(--white);
+}
+
+.info-item {
+    margin-bottom: 30px;
+}
+
+.info-item h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--white);
+}
+
+.info-item p {
+    font-size: 18px;
+    color: var(--white);
+    line-height: 1.6;
+}
+
+.contact-form {
+    background: var(--white);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 18px 20px;
+    border: 2px solid var(--medium-gray);
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: 'DM Sans', sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.btn-submit {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 18px 50px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-submit:hover {
+    background: var(--dark-gray);
+}
+
+/* Footer */
+.footer {
+    background: var(--dark-gray);
+    color: var(--white);
+    padding: 80px 0 30px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 50px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-family: 'TeX Gyre Termes';
+}
+
+.footer-logo img {
+    width: 40px;
+    height: 40px;
+}
+
+.footer-section p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--medium-gray);
+}
+
+.footer-section h4 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    font-family: 'TeX Gyre Termes';
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 15px;
+}
+
+.footer-section ul li a {
+    color: var(--medium-gray);
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: var(--accent-color);
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.social-links a {
+    color: var(--medium-gray);
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid var(--secondary-color);
+}
+
+.footer-bottom p {
+    color: var(--medium-gray);
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 40px;
+    }
+
+    .hero h1 {
+        font-size: 72px;
+    }
+
+    .products-grid,
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        gap: 25px;
+        font-size: 16px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero-subtitle {
+        font-size: 24px;
+    }
+
+    .why-content,
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .collaboration-grid,
+    .products-grid,
+    .team-grid,
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container,
+    .nav-container {
+        padding: 0 20px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero-subtitle {
+        font-size: 18px;
+    }
+}
+
+/* Background Section Bergantian */
+
+/* Section 1 - Why: Biru muda */
+.why-section {
+    background: #DCEEFF;
+}
+
+/* Section 2 - Collaboration: Biru navy */
+.collaboration-section {
+    background: #123B63;
+}
+
+/* Section 3 - Products: Putih */
+.products-section {
+    background: #FFFFFF;
+}
+
+/* Section 4 - Team: Biru muda */
+.team-section {
+    background: #DCEEFF;
+}
+
+/* Section 5 - Contact: Putih */
+.contact-section {
+    background: #FFFFFF;
+}
+
+/* Menyesuaikan warna judul Contact */
+.contact-section .section-title {
+    color: #0D47A1;
+}
+
+/* Menyesuaikan warna informasi kontak */
+.contact-info h3,
+.contact-info h4,
+.contact-info p {
+    color: #123B63;
+}
+
+/* Footer tetap biru navy */
+.footer {
+    background: #123B63;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 40px;
+  background: #4a9fd8;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;   /* hilangkan garis bawah */
+  border: 2px solid #fff;  /* bingkai */
+  border-radius: 999px;    /* bentuk pil */
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #fff;
+  color: #4a9fd8;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+/* Base Styles */
+body {
+    font-family: 'DM Sans', 'Gotham', 'TeX Gyre Termes',
+    'TT Interphases Mono', sans-serif;
+
+    line-height: 1.6;
+    color: var(--text-color);
+    overflow-x: hidden;
+
+    background-color: #EAF4FC;
+}
+
+/* Sosial Media Tim */
+.sosmed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.sosmed-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    transition: 0.3s ease;
+    
+}
+
+.sosmed-item i {
+    font-size: 17px;
+    font-weight: normal;
+}
+
+.sosmed-item span {
+    font-weight: 400;
+}
+
+.sosmed-item:hover {
+    color: var(--primary-color);
+}
+
+/* ================================
+   FOOTER
+================================ */
+.footer {
+    background: #24496c;
+    color: #d9edff;
+    padding: 45px 0 18px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 35px;
+}
+
+.footer-logo {
+    margin-bottom: 15px;
+}
+
+.footer-logo img {
+    border: 2px solid #8ed4ff;
+}
+
+.footer-logo span {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.footer-section p {
+    font-size: 14px;
+    color: #d9edff;
+    line-height: 1.8;
+}
+
+.footer-section h4 {
+    color: #8ed4ff;
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+.footer-section h4::after {
+    content: "";
+    display: block;
+    width: 35px;
+    height: 3px;
+    background: #8ed4ff;
+    margin-top: 8px;
+    border-radius: 5px;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+    font-size: 13px;
+    color: #d9edff;
+}
+
+.footer-section a {
+    text-decoration: none;
+    color: #d9edff;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.footer-section a:hover {
+    color: #8ed4ff;
+    padding-left: 5px;
+}
+
+/* SOCIAL LINKS */
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.social-links a {
+    display: inline-block;
+    width: fit-content;
+    padding: 7px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    background: #8ed4ff;
+    color: #174b7a;
+    padding-left: 20px;
+}
+
+/* FOOTER BOTTOM */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 20px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 13px;
+    color: #d9edff;
+}
+
+/* ================================
+   RESPONSIVE TABLET
+================================ */
+@media (max-width: 900px) {
+
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ================================
+   RESPONSIVE HP
+================================ */
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 12px 0;
+    }
+
+    .nav-menu {
+        gap: 8px;
+    }
+
+    .nav-menu a {
+        font-size: 12px;
+        padding: 7px 12px;
+    }
+
+    .hero-content-page h1 {
+        font-size: 26px;
+    }
+
+    .subtitle {
+        font-size: 15px;
+        letter-spacing: 1px;
+    }
+
+    .page-hero {
+        padding: 55px 0;
+    }
+
+    .intro-section,
+    .observations-section {
+        padding: 40px 0;
+    }
+
+    .intro-content {
+        padding: 22px;
+    }
+
+    .intro-content h2 {
+        font-size: 23px;
+    }
+
+    .section-title-page {
+        font-size: 24px;
+        margin-bottom: 28px;
+    }
+
+    .observation-header {
+        padding: 18px;
+    }
+
+    .author-info {
+        gap: 12px;
+    }
+
+    .author-info img {
+        width: 52px;
+        height: 52px;
+    }
+
+    .author-info h3 {
+        font-size: 14px;
+    }
+
+    .observation-content {
+        padding: 22px 18px;
+    }
+
+    .observation-content h4 {
+        font-size: 18px;
+    }
+
+    .observation-content p {
+        font-size: 14px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+}
+
